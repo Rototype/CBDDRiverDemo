@@ -99,7 +99,7 @@ namespace CBD1000_Demo
                 string DateString = DateTime.Now.ToString("dddd, dd MMMM yyyy - HH:mm");
                 string TText = "";
                 if (enableCodelinePrintingToolStripMenuItem.Checked)
-                    TText = "70405707 30600234 " + number;
+                    TText = new string(' ', 30) + "1234567890 " + number;
                 cheque.Barcode = new CbdDriver.BarcodeDefinition
                 {
                     Number = 1,
@@ -110,6 +110,7 @@ namespace CBD1000_Demo
                 
                 cheque.Fields.Add(new CbdDriver.Field
                     {
+                     
                         Number = 0,
                         Text = TText
                     }
